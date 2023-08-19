@@ -3,7 +3,7 @@
     color: var(--black);
 }
 
-:root.dark {
+:root[data-theme=dark] {
     background-color: var(--dark700);
     color: var(--dark50);
 }

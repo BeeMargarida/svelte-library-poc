@@ -7,10 +7,13 @@ export const toggleTheme = () => {
   theme.update((t) => t === 'light' ? 'dark' : 'light');
 }
 
-theme.subscribe((t) => {
-  if (t === 'light') {
-    document.documentElement.classList.remove('dark')
-  } else {
-    document.documentElement.classList.add('dark')
-  }
-})
+export const setupThemeToggle = () => {
+  // @TODO: should also fetch from 'prefers-color-scheme'
+  theme.subscribe((t) => {
+    if (t === 'light') {
+      window.document.documentElement.dataset.theme = 'light';
+    } else {
+      window.document.documentElement.dataset.theme = 'dark';
+    }
+  });
+}

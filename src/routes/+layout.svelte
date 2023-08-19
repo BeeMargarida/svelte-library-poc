@@ -1,6 +1,11 @@
 <script>
 	// import '$lib/app.scss';
-	import { ThemeContext } from '$lib';
+	import { onMount } from 'svelte';
+	import { ThemeContext, setupThemeToggle } from '$lib';
+
+	onMount(() => {
+		setupThemeToggle();
+	});
 </script>
 
 <ThemeContext>
