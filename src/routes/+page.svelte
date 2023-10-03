@@ -8,5 +8,5 @@
 
 <Button>Hi!</Button>
 <Button variant="light">Hi!</Button>
-<Button color={'dark'}>Hi!</Button>
-<Button color={'red'} fontSize="xl">Hi!</Button>
+<Button color={'red'} size="xl">Hi!</Button>
+<Button compact>Hi!</Button>
